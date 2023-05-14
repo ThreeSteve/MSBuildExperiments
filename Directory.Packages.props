@@ -1,0 +1,16 @@
+<Project>
+
+    <PropertyGroup>
+       <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageVersion Include="GitInfo" Version="3.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageVersion Include="NuGetizer" Version="1.0.4" />
+    </ItemGroup>
+
+
+</Project>

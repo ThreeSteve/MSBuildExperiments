@@ -1,0 +1,65 @@
+<Project>
+
+    <!-- This also appears in the NuGet packages if they are created -->
+    <!--<PropertyGroup>
+        <Version>1.0.0.0</Version>
+    </PropertyGroup>-->
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- New .NET SDK 8 build output stuff, https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-3/> -->
+    <PropertyGroup>
+        <UseArtifactsOutput>true</UseArtifactsOutput>
+        <!--<ArtifactsPath>VS17</ArtifactsPath>-->
+        <ArtifactsProjectName>Unused</ArtifactsProjectName>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <WarningLevel>4</WarningLevel>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <!-- GitInfo -->
+
+    <ItemGroup>
+        <PackageReference Include="GitInfo"/>
+    </ItemGroup>
+
+    <!-- NuGet packages -->
+
+    <ItemGroup>
+        <PackageReference Include="NuGetizer"/>
+    </ItemGroup>
+
+    <!-- If this is not set then you have to manualy pack projects -->
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Authors>David Hunter</Authors>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <!--<Pack>true</Pack>-->
+        <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
+        <!--<PackBuildOutput>true</PackBuildOutput>
+        <PackageOutputPath>$(SolutionDir)package</PackageOutputPath>
+        <IsPackable>true</IsPackable>-->
+    </PropertyGroup>
+
+    <!-- TODO check these are what we want and conform to modern practice, also look into SourceServer stuff -->
+    <!--<PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageOutputPath>$(SolutionDir)VS$(VisualStudioVersionMajor)</PackageOutputPath>
+        <IncludeSymbols>true</IncludeSymbols>
+        <IsPackable>true</IsPackable>
+        <EmbedAllSources>true</EmbedAllSources>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>-->
+
+</Project>
