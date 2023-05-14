@@ -26,8 +26,12 @@
     <!-- GitInfo -->
 
     <ItemGroup>
-        <PackageReference Include="GitInfo"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="all"/>
     </ItemGroup>
+
+    <PropertyGroup>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    </PropertyGroup>
 
     <!-- NuGet packages -->
 

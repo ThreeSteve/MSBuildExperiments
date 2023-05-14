@@ -5,11 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageVersion Include="GitInfo" Version="3.0.6" />
+        <PackageVersion Include="NuGetizer" Version="1.0.4" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageVersion Include="NuGetizer" Version="1.0.4" />
+        <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="1.1.1" />
     </ItemGroup>
 
 
