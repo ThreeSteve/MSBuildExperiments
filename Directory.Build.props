@@ -23,15 +23,6 @@
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 
-    <!-- GitInfo -->
-
-    <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="all"/>
-    </ItemGroup>
-
-    <PropertyGroup>
-        <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    </PropertyGroup>
 
     <!-- NuGet packages -->
 
@@ -48,22 +39,42 @@
         <Authors>David Hunter</Authors>
     </PropertyGroup>
 
+    <!-- SourceLink stuff -->
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="all"/>
+    </ItemGroup>
+
     <PropertyGroup>
-        <!--<Pack>true</Pack>-->
-        <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
-        <!--<PackBuildOutput>true</PackBuildOutput>
-        <PackageOutputPath>$(SolutionDir)package</PackageOutputPath>
-        <IsPackable>true</IsPackable>-->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
     </PropertyGroup>
 
-    <!-- TODO check these are what we want and conform to modern practice, also look into SourceServer stuff -->
-    <!--<PropertyGroup>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageOutputPath>$(SolutionDir)VS$(VisualStudioVersionMajor)</PackageOutputPath>
-        <IncludeSymbols>true</IncludeSymbols>
-        <IsPackable>true</IsPackable>
-        <EmbedAllSources>true</EmbedAllSources>
-        <DebugType>embedded</DebugType>
-    </PropertyGroup>-->
+    <!-- This tells Nugetizer to embed the .PDB into the .nuget package -->
+    <PropertyGroup>
+        <PackBuildOutput>true</PackBuildOutput>
+    </PropertyGroup>
 
+    <!-- See https://github.com/dotnet/sourcelink/blob/main/docs/README.md for some stuff -->
+    <!-- The .snupkg file can be published along with the .nuget file -->
+    <!-- https://learn.microsoft.com/en-us/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server -->
+    <!-- These seem to be ignored when using Nugetizer -->
+    <PropertyGroup>
+        <!--<IncludeSymbols>true</IncludeSymbols>-->
+        <!--<SymbolPackageFormat>snupkg</SymbolPackageFormat>-->
+    </PropertyGroup>
+
+    <!-- The alternative to the above seems to be to embed to PDB into the DLL -->
+    <!-- https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview?tabs=cli#include-pdb-files-inside-the-bundle -->
+    <PropertyGroup>
+        <!--<DebugType>embedded</DebugType>-->
+    </PropertyGroup>
+
+    <!-- I think you can use these either with snupkg or DebugType=embedded -->
+    <PropertyGroup>
+        <!-- This embeds all source files into the PDB -->
+        <!--<EmbedAllSources>true</EmbedAllSources>-->
+
+        <!-- This is used to embed files not in source control, it is ignred if EmbedAllSources is set  -->
+        <!--<EmbedUntrackedSources>true</EmbedUntrackedSources>-->
+    </PropertyGroup>
 </Project>
