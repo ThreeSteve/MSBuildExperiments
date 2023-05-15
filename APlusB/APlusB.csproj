@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageId>AAndB</PackageId>
+        <PackageDescription>Why oh why is this so hard</PackageDescription>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\A\A.csproj"><PrivateAssets>all</PrivateAssets></ProjectReference>
+    <ProjectReference Include="..\B\B.csproj" />
+  </ItemGroup>
+
+    <!-- Module experiment -->
+    <!--<ItemGroup>
+        <AddModules Include="C:\Users\david\devel\MSBuildExperiments\.artifacts\bin\A\debug_net8.0\A.dll" />
+        <AddModules Include="C:\Users\david\devel\MSBuildExperiments\.artifacts\bin\B\debug_net8.0\B.dll" />
+    </ItemGroup>-->
+
+
+
+</Project>

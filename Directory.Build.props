@@ -11,11 +11,24 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <!-- If you want to create your own assembly metadata somehow you need to switch off the automatic stuff -->
+    <!--<PropertyGroup>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    </PropertyGroup>-->
+
+    <!-- Simplified output path -->
+
     <!-- New .NET SDK 8 build output stuff, https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-3/> -->
     <PropertyGroup>
         <UseArtifactsOutput>true</UseArtifactsOutput>
         <!--<ArtifactsPath>VS17</ArtifactsPath>-->
-        <ArtifactsProjectName>Unused</ArtifactsProjectName>
+
+        <!-- This seems to effect the obj directory tree as well so probably won't work -->
+        <!--<ArtifactsProjectName>Unused</ArtifactsProjectName>-->
+
+        <!-- This was suggested here https://github.com/dotnet/designs/pull/281#issuecomment-1547049833 but also effects the obj tree -->
+        <!-- https://github.com/dotnet/sdk/blob/main/src/Tasks/Microsoft.NET.Build.Tasks/sdk/Sdk.props for setting of BaseIntermediateOutputPath -->
+        <!--<IncludeProjectNameInArtifactsPaths>false</IncludeProjectNameInArtifactsPaths>-->
     </PropertyGroup>
 
     <PropertyGroup>
@@ -38,6 +51,7 @@
     <PropertyGroup>
         <Authors>David Hunter</Authors>
     </PropertyGroup>
+
 
     <!-- SourceLink stuff -->
 
@@ -77,4 +91,18 @@
         <!-- This is used to embed files not in source control, it is ignred if EmbedAllSources is set  -->
         <!--<EmbedUntrackedSources>true</EmbedUntrackedSources>-->
     </PropertyGroup>
+
+
+    <!-- Combo libraries -->
+    <!-- .NET assemblies dont support multi file assemblies, https://learn.microsoft.com/en-us/dotnet/framework/app-domains/build-multifile-assembly -->
+    <!-- .NET Core seems to realize this is a problem https://github.com/dotnet/runtime/issues/68761 -->
+
+    <!-- netmodules, possibly for creating combo assemblies -->
+    <!-- Set <OutputType>Module</OutputType> to produce a .netmodule -->
+
+    <!-- Set this if you want to build netmodules as you can't have a refernce assembly to a .netmodule  -->
+    <!--<PropertyGroup>
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    </PropertyGroup>-->
+
 </Project>
