@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APlusBPlusC", "APlusBPlusC\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APlusBPlusC_And_APlusB", "APlusBPlusC_And_APlusB\APlusBPlusC_And_APlusB.csproj", "{2CB52ACE-4724-421C-893F-9D5C02FBDB3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_A_B_C", "Console_A_B_C\Console_A_B_C.csproj", "{3B20115B-5A35-4798-A985-A5B33D5C1212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console_A_B_C", "Console_A_B_C\Console_A_B_C.csproj", "{3B20115B-5A35-4798-A985-A5B33D5C1212}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console_All_Six_Libraries", "Console_All_Six_Libraries\Console_All_Six_Libraries.csproj", "{B39CFD7D-A076-4030-B90B-3497149F8B1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console_All_Six_Libraries_Alias", "Console_All_Six_Libraries_Alias\Console_All_Six_Libraries_Alias.csproj", "{C667D2DE-1183-4E75-B429-B7B020430FCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{B39CFD7D-A076-4030-B90B-3497149F8B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B39CFD7D-A076-4030-B90B-3497149F8B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B39CFD7D-A076-4030-B90B-3497149F8B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C667D2DE-1183-4E75-B429-B7B020430FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C667D2DE-1183-4E75-B429-B7B020430FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C667D2DE-1183-4E75-B429-B7B020430FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C667D2DE-1183-4E75-B429-B7B020430FCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

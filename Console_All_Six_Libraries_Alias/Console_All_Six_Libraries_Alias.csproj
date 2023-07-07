@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APlusBPlusC\APlusBPlusC.csproj">
+      <Aliases>APlusBPlusC_Lib</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\APlusBPlusC_And_APlusB\APlusBPlusC_And_APlusB.csproj" />
+    <ProjectReference Include="..\APlusB\APlusB.csproj">
+      <Aliases>APlusB_Lib</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\A\A.csproj">
+      <Aliases>Fundamental_A</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\B\B.csproj">
+      <Aliases>Fundamental_B</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\C\C.csproj">
+      <Aliases>Fundamental_C</Aliases>
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>
