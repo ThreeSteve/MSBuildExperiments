@@ -1,5 +1,5 @@
 # MSBuildExperiments
-Various expreiments with things like Nugetizer, GitInfo, Simplified output path. ...
+Various experiments  with things like Nugetizer, GitInfo, Simplified output path. ...
 
 Dependent Projects Using ProjectReference Include and Alias
 
