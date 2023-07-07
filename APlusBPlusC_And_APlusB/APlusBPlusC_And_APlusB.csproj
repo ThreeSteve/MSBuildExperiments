@@ -14,6 +14,8 @@
   <ItemGroup>
     <Compile Include="..\A\*.cs" LinkBase="Common\A" />
     <Compile Include="..\B\*.cs" LinkBase="Common\B" />
+    <Compile Include="..\C\*.cs" LinkBase="Common\C" />
+    <Compile Include="..\APlusB\*.cs" LinkBase="Common\APlusB" />
   </ItemGroup>
 
 </Project>

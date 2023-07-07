@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APlusBPlusC\APlusBPlusC.csproj" />
+    <ProjectReference Include="..\APlusBPlusC_And_APlusB\APlusBPlusC_And_APlusB.csproj" />
+    <ProjectReference Include="..\APlusB\APlusB.csproj" />
+    <ProjectReference Include="..\A\A.csproj" />
+    <ProjectReference Include="..\B\B.csproj" />
+    <ProjectReference Include="..\C\C.csproj" />
+  </ItemGroup>
+
+</Project>

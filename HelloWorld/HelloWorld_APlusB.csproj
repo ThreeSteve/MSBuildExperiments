@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageId>Test.Package</PackageId>
+        <PackageDescription>Playing around with Nugetizer, GitInfo and other packages</PackageDescription>
+    </PropertyGroup>
+
+</Project>
